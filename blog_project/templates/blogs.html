@@ -1,0 +1,10 @@
+{% extends 'index.html'%}
+
+{% block content %}
+
+        {% for blog in blogs %}
+        <h2 class="main-title" href="">{{ blog.title }}</h2>
+
+        {% endfor %}
+
+{% endblock content %}
