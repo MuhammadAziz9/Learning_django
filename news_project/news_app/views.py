@@ -16,3 +16,12 @@ def news_detail(request,id):
         'news':news
     }
     return render(request,'news/news_detail.html',context=context)
+
+def HomePageView(request):
+    news = News.published.all()
+    categories = Category.objects.all()
+    context = {
+        'news':news,
+        'categories':categories
+    }
+    return render(request,'news/index.html',context=context)
